@@ -1,0 +1,152 @@
+/* ===== Base layout ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 1.5rem 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin: 0 0 1rem;
+}
+
+/* ===== Controls ===== */
+.controls {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+button {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.98rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.05s;
+}
+button:hover { background-color: #45a049; }
+button:active { transform: translateY(1px); }
+button:disabled { background-color: #cccccc; cursor: not-allowed; }
+
+/* ===== Layout: left panel + board ===== */
+.main {
+    display: grid;
+    grid-template-columns: 220px auto;
+    gap: 1rem;
+    align-items: start;
+}
+
+/* ===== Chessboard grid ===== */
+.chessboard {
+    display: grid;
+    grid-template-columns: 30px repeat(8, 60px);
+    grid-template-rows: 30px repeat(8, 60px);
+    gap: 1px;
+    border: 2px solid #333;
+    margin: 0 auto;
+    position: relative;
+    background-color: #333;
+}
+
+.row-label,
+.column-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+    user-select: none;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+.square.light { background-color: #f0d9b5; }
+.square.dark  { background-color: #b58863; }
+.square.highlight { background-color: #ff9999; }
+
+/* Transparent row highlight for last played row */
+.row-focus {
+  /* overlay a soft translucent neon green with a subtle glow */
+  box-shadow:
+    inset 0 0 0 2000px rgba(57, 255, 20, 0.22), /* fill */
+    0 0 6px rgba(57, 255, 20, 0.45),            /* glow */
+    0 0 12px rgba(57, 255, 20, 0.35);
+  transition: box-shadow 180ms ease-in-out;
+}
+
+.queen {
+    font-size: 40px;
+    color: #333;
+}
+
+/* ===== Left panel ===== */
+.leftpanel {
+    text-align: left;
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: .75rem .9rem;
+}
+
+.leftpanel h3 {
+    margin: .6rem 0 .4rem;
+    font-size: 1rem;
+}
+
+/* State vector list */
+.statevec {
+    list-style: none;
+    padding-left: 0;
+    margin: .2rem 0 .4rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 1.05rem;
+}
+.statevec li { margin: .25rem 0; }
+.statevec li .idx { color: #333; margin-right: .35rem; }
+.statevec li .val { color: #111; }
+
+.status {
+    margin-top: .8rem;
+    font-size: 1.02rem;
+    min-height: 24px;
+    color: #333;
+}
+
+/* Heuristic display */
+.heuristic-info {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+#heuristicValue { color: #e74c3c; }
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>8 Queens Puzzle Solver</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>8 Queens Puzzle Solver</h1>
+
+    <div class="controls">
+      <!-- Main actions -->
+      <button id="nextBtn">Next Step</button>
+      <button id="resetBtn">Restart</button>
+
+    
+    </div>
+
+    <!-- Two-column layout: LEFT (state vector) | BOARD -->
+    <div class="main">
+      <!-- LEFT: state vector -->
+      <aside class="leftpanel">
+        <h3>State Vector</h3>
+        <ol id="stateVector" class="statevec">
+        </ol>
+      </aside>
+
+      <!-- CENTER: chess board -->
+      <div id="board" class="chessboard"></div>
+    </div>
+    <div id="status" class="status" aria-live="polite"></div>
+  </div>
+
+  <script src="solver.js"></script>
+</body>
+</html>
+
