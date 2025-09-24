@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>8 Queens Puzzle Solver</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>8 Queens Puzzle Solver</h1>
@@ -15,13 +17,15 @@
       <button id="nextBtn">Next Step</button>
       <button id="resetBtn">Restart</button>
 
-    
+      <!-- NEW: Auto-play + Speed -->
+      <button id="autoBtn" title="Run automatically">Auto</button>
+      <button id="speedBtn" title="Change auto speed">Speed: 2x</button>
+
     </div>
 
-    <!-- Two-column layout: LEFT (state vector) | BOARD -->
     <div class="main">
       <!-- LEFT: state vector -->
-      <aside class="leftpanel">
+      <aside class="left">
         <h3>State Vector</h3>
         <ol id="stateVector" class="statevec">
         </ol>
@@ -35,5 +39,5 @@
 
   <script src="solver.js"></script>
 </body>
-</html>
 
+</html>
