@@ -3,6 +3,18 @@
 ## Overview
 This project implements a chess-playing application that uses a machine learning-based evaluation system instead of the traditional Minimax algorithm with piece-square tables. The ML model is trained on a large dataset of chess positions with their corresponding evaluation scores.
 
+## Demo Screenshots
+<img width="810" height="507" alt="Screenshot 2025-10-30 at 1 51 14 PM" src="https://github.com/user-attachments/assets/3a317983-84dd-4bbe-9ed3-f4a5597f5a65" />
+
+<img width="807" height="503" alt="Screenshot 2025-10-30 at 1 52 17 PM" src="https://github.com/user-attachments/assets/0dbbc200-5a45-4fd0-93fd-2ae3f11c1096" />
+
+<img width="806" height="504" alt="Screenshot 2025-10-30 at 1 54 02 PM" src="https://github.com/user-attachments/assets/565577c7-58e6-43c2-bf96-58e4f88f34c9" />
+
+<img width="803" height="505" alt="Screenshot 2025-10-30 at 1 55 46 PM" src="https://github.com/user-attachments/assets/16fa9dd5-c572-48df-808f-d4a568a2ce37" />
+
+<img width="795" height="507" alt="Screenshot 2025-10-30 at 1 56 44 PM" src="https://github.com/user-attachments/assets/8af305f7-b4e8-4099-892c-b164a4d36c5e" />
+
+
 ## Features
 - **ML-Based Position Evaluation**: Neural network trained on 500,000+ chess positions
 - **Interactive Chess Board**: Play against AI or in two-player mode
